@@ -1,0 +1,35 @@
+Blog TDD con boilerplate
+
+- Il progetto
+
+- L'utente potra registrarsi
+- L'utente potra creare un post
+- L'utente potrà visualizzare un post xxx
+    + Ogni post è associato a una categoria xxx
+    + Ogno post appartiene a un utente xxx
+    + Ogno post puo avere uno o piu tags
+    + Ogni post potra avere un'immagine cover
+
+- L'utente autore potra modificare un proprio post
+- L'utente admin potra modificare qualsiasi post
+
+- Una volta modificato un posto da un autore, l'admin riceverà una mail
+- Una volta modificato un posto da un admin, l'autore riceverà una mail
+
+- I post potranno essere visualizzati per categoria
+- I post potranno essere visualizzati per tag
+- I post potranno essere visualizzati per mese
+
+- Nella sidebar sarà visibile un archivo per mese
+- Nella sidebar sarà visibile un lista categorie con numero post
+- Nella sidebar sarà visibile un tag cloud
+
+- Il blog dovrà esporre un API con JWT per tutte le azioni soprastanti
+
+
+
+
+- Ogni funzionalità dovrà essere coperta da test
+- Per l'API genereremo la documentazione OpenApi/Swagger
+- Per tutta la sorgente auto-genereremo la documentazione
+- Tutto il processo di build passerà per CI (travis-ci.org)
