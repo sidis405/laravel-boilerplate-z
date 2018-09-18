@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Blog\Http\Controllers;
 
-use App\Tag;
-use App\Post;
-use App\Category;
-use App\Http\Requests\PostRequest;
+use Blog\Models\Tag;
+use Blog\Models\Post;
+use Blog\Models\Category;
+use Blog\Http\Requests\PostRequest;
+use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {

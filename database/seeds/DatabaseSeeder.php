@@ -1,9 +1,9 @@
 <?php
 
-use App\Tag;
-use App\Post;
-use App\User;
-use App\Category;
+use Blog\Models\Tag;
+use Blog\Models\Post;
+use Blog\Models\User;
+use Blog\Models\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

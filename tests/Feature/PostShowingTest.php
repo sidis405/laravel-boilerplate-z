@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Tag;
-use App\Post;
-use App\User;
-use App\Category;
 use Tests\TestCase;
+use Blog\Models\Tag;
+use Blog\Models\Post;
+use Blog\Models\User;
+use Blog\Models\Category;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PostShowingTest extends TestCase

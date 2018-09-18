@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use App\Tag;
-use App\Post;
-use App\User;
-use App\Category;
 use Tests\TestCase;
+use Blog\Models\Tag;
+use Blog\Models\Post;
+use Blog\Models\User;
+use Blog\Models\Category;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PostTest extends TestCase
@@ -26,7 +26,7 @@ class PostTest extends TestCase
         $post->load('category');
 
         // assert
-        $this->assertInstanceOf('App\Category', $post->category);
+        $this->assertInstanceOf(Category::class, $post->category);
     }
 
     /** @test */
@@ -42,7 +42,7 @@ class PostTest extends TestCase
         $post->load('user');
 
         // assert
-        $this->assertInstanceOf('App\User', $post->user);
+        $this->assertInstanceOf(User::class, $post->user);
     }
 
     /** @test */
@@ -63,6 +63,6 @@ class PostTest extends TestCase
         // un post appartiene al num_tags associati con lui
         $this->assertEquals($num_tags, $post->tags->count());
         // un tag del post è di tipo App\Tag
-        $this->assertInstanceOf('App\Tag', $post->tags->first());
+        $this->assertInstanceOf(Tag::class, $post->tags->first());
     }
 }

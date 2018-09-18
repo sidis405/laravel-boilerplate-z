@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Post;
-use App\User;
 use Tests\TestCase;
+use Blog\Models\Post;
+use Blog\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserTest extends TestCase
@@ -24,6 +24,6 @@ class UserTest extends TestCase
 
         $this->assertInstanceOf('Illuminate\Support\Collection', $user->posts);
         $this->assertEquals(2, $user->posts->count());
-        $this->assertInstanceOf('App\Post', $user->posts->first());
+        $this->assertInstanceOf(Post::class, $user->posts->first());
     }
 }
