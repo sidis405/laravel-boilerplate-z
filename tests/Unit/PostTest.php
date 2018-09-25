@@ -65,4 +65,12 @@ class PostTest extends TestCase
         // un tag del post è di tipo App\Tag
         $this->assertInstanceOf(Tag::class, $post->tags->first());
     }
+
+    /** @test */
+    public function postWithNoCoverHasDefaultCover()
+    {
+        $post = factory(Post::class)->create();
+
+        $this->assertEquals('/storage/covers/default.jpg', $post->cover);
+    }
 }

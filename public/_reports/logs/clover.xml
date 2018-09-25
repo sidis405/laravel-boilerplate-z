@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1537268279">
-  <project timestamp="1537268279">
+<coverage generated="1537865371">
+  <project timestamp="1537865371">
     <package name="Blog\Http\Controllers">
       <file name="/Users/sid/Code/web/laravel-boilerplate/app/Blog/Http/Controllers/PostsController.php">
         <class name="Blog\Http\Controllers\PostsController" namespace="Blog\Http\Controllers">
-          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="14" coveredelements="14"/>
+          <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="17" coveredelements="0"/>
         </class>
-        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
-        <line num="15" type="stmt" count="9"/>
-        <line num="16" type="stmt" count="9"/>
-        <line num="18" type="method" name="show" visibility="public" complexity="1" crap="1" count="4"/>
-        <line num="20" type="stmt" count="4"/>
-        <line num="22" type="stmt" count="4"/>
-        <line num="25" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="27" type="stmt" count="1"/>
-        <line num="28" type="stmt" count="1"/>
-        <line num="30" type="stmt" count="1"/>
-        <line num="33" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="35" type="stmt" count="1"/>
-        <line num="37" type="stmt" count="1"/>
-        <line num="39" type="stmt" count="1"/>
-        <metrics loc="41" ncloc="41" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="14" coveredelements="14"/>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="18" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="25" type="method" name="show" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="32" type="method" name="create" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="48" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="17" coveredelements="0"/>
       </file>
     </package>
     <package name="Blog\Http\Requests">
       <file name="/Users/sid/Code/web/laravel-boilerplate/app/Blog/Http/Requests/PostRequest.php">
         <class name="Blog\Http\Requests\PostRequest" namespace="Blog\Http\Requests">
-          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
         </class>
-        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="16" type="stmt" count="2"/>
-        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="27" type="stmt" count="2"/>
-        <metrics loc="33" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
     </package>
     <package name="Blog\Models">
@@ -44,15 +47,24 @@
       </file>
       <file name="/Users/sid/Code/web/laravel-boilerplate/app/Blog/Models/Post.php">
         <class name="Blog\Models\Post" namespace="Blog\Models">
-          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+          <metrics complexity="6" methods="5" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="1" elements="15" coveredelements="2"/>
         </class>
-        <line num="11" type="method" name="category" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="13" type="stmt" count="5"/>
-        <line num="16" type="method" name="user" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="18" type="stmt" count="5"/>
-        <line num="21" type="method" name="tags" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="23" type="stmt" count="6"/>
-        <metrics loc="25" ncloc="25" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+        <line num="11" type="method" name="category" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="16" type="method" name="user" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="21" type="method" name="tags" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="26" type="method" name="getCoverAttribute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="31" type="method" name="setCoverAttribute" visibility="public" complexity="2" crap="6.00" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="5" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="1" elements="15" coveredelements="2"/>
       </file>
       <file name="/Users/sid/Code/web/laravel-boilerplate/app/Blog/Models/Tag.php">
         <class name="Blog\Models\Tag" namespace="Blog\Models">
@@ -62,13 +74,13 @@
       </file>
       <file name="/Users/sid/Code/web/laravel-boilerplate/app/Blog/Models/User.php">
         <class name="Blog\Models\User" namespace="Blog\Models">
-          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
         </class>
-        <line num="30" type="method" name="posts" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="32" type="stmt" count="2"/>
-        <metrics loc="34" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        <line num="30" type="method" name="posts" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </file>
     </package>
-    <metrics files="6" loc="153" ncloc="129" classes="4" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="26" coveredelements="26"/>
+    <metrics files="6" loc="176" ncloc="152" classes="4" methods="13" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="1" elements="38" coveredelements="2"/>
   </project>
 </coverage>

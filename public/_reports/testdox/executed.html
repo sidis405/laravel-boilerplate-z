@@ -33,6 +33,7 @@
             <li style="color: #555753;">✓ It belongs to a category</li>
             <li style="color: #555753;">✓ It belongs to a user</li>
             <li style="color: #555753;">✓ It belongs to many tags</li>
+            <li style="color: #555753;">✓ Post with no cover has default cover</li>
         </ul>
         <h2 id="Tests\Unit\UserTest">Unit\User</h2>
         <ul>
@@ -45,6 +46,23 @@
             <li style="color: #555753;">✓ A guest user cannot create post</li>
             <li style="color: #555753;">✓ A user can create post</li>
             <li style="color: #555753;">✓ Has mandatory fields</li>
+        </ul>
+        <h2 id="Tests\Feature\PostEditingTest">Feature\PostEditing</h2>
+        <ul>
+            <li style="color: #555753;">✓ A guest user cannot see editing form</li>
+            <li style="color: #555753;">✓ A user can see post editing form</li>
+            <li style="color: #555753;">✓ User can update post</li>
+            <li style="color: #555753;">✓ A user cannot modify others post</li>
+        </ul>
+        <h2 id="Tests\Feature\PostImageUploadTest">Feature\PostImageUpload</h2>
+        <ul>
+            <li style="color: #555753;">✓ User can upload an image</li>
+            <li style="color: #555753;">✓ Creation form has cover element</li>
+            <li style="color: #555753;">✓ Covers are shown</li>
+        </ul>
+        <h2 id="Tests\Feature\PostIndexingTest">Feature\PostIndexing</h2>
+        <ul>
+            <li style="color: #555753;">✓ Home shows all post latest first</li>
         </ul>
         <h2 id="Tests\Feature\PostShowingTest">Feature\PostShowing</h2>
         <ul>

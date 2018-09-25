@@ -22,4 +22,19 @@ class Post extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+
+    public function getCoverAttribute($cover)
+    {
+        return '/storage/' . ($cover ?? 'covers/default.jpg');
+    }
+
+    public function setCoverAttribute($cover)
+    {
+        $cover = $cover ? $cover->storeAs(
+            'covers',
+            md5($cover->getClientOriginalName()) . '.' . $cover->getClientOriginalExtension()
+        ) : null;
+
+        $this->attributes['cover'] = $cover;
+    }
 }

@@ -72,7 +72,10 @@
 
         <main class="py-4">
             <div class="container">
-                @yield('content')
+                <div class="col-md-9">
+                    @include('layouts._errors')
+                    @yield('content')
+                </div>
             </div>
         </main>
     </div>

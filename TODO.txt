@@ -2,21 +2,26 @@ Blog TDD con boilerplate
 
 - Il progetto
 
-- L'utente potra registrarsi
-- L'utente potra creare un post
+- L'utente potra registrarsi xxx
 
 - L'utente potrà visualizzare un post xxx
     + Ogni post è associato a una categoria xxx
     + Ogno post appartiene a un utente xxx
     + Ogno post puo avere uno o piu tags xxx
-    + Ogni post potra avere un'immagine cover
+
+    + Ogni post potra avere un'immagine cover xxx
+    + Un post ha una cover di default xxx
 
 - L'utente potrà creare un post xxx
+
+- L'utente potrà vedere il listato posts nella home xxx
+
 - L'utente autore potra modificare un proprio post
 - L'utente admin potra modificare qualsiasi post
-
 - Una volta modificato un posto da un autore, l'admin riceverà una mail
 - Una volta modificato un posto da un admin, l'autore riceverà una mail
+
+
 
 - I post potranno essere visualizzati per categoria
 - I post potranno essere visualizzati per tag

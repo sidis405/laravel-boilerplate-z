@@ -12,5 +12,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'body' => $faker->paragraphs(5, true),
         'category_id' => factory(Category::class),
         'user_id' => factory(User::class),
+        'created_at' => now()
     ];
 });
