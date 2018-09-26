@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Blog\Models\Tag;
 use Blog\Models\Post;
+use Blog\Models\User;
 use Blog\Models\Category;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -25,7 +26,7 @@ class PostEditingTest extends TestCase
     }
 
     /** @test */
-    public function aUserCanSeePostEditingForm()
+    public function aUserCanSeeOwnPostEditingForm()
     {
         // arrange
         $this->signIn();
@@ -67,24 +68,11 @@ class PostEditingTest extends TestCase
     }
 
     /** @test */
-    public function userCanUpdatePost()
+    public function userCanUpdateOwnPost()
     {
-        $this->signIn();
+        factory(User::class)->create(['role' => 'admin']);
 
-        $post = factory(Post::class)->create([
-            'user_id' => auth()->id()
-        ]);
-
-
-        $category = factory(Category::class)->create();
-        $tags = factory(Tag::class, 3)->create();
-        $postData = [
-            'title' => 'A test post',
-            'preview' => 'Some preview text',
-            'body' => 'Article body',
-            'category_id' => $category->id,
-            'tags' => $tags->pluck('id'),
-        ];
+        [$post, $postData, $tags] = $this->updatePostAs('user');
 
         $response = $this->patch(route('posts.update', $post), $postData);
 
@@ -108,5 +96,15 @@ class PostEditingTest extends TestCase
         $response = $this->patch(route('posts.update', $post), []);
 
         $response->assertStatus(403); //policy
+    }
+
+    /** @test */
+    public function adminCanModifyAnyPost()
+    {
+        [$post, $postData, $tags] = $this->updatePostAs('admin');
+
+        $response = $this->patch(route('posts.update', $post), $postData);
+
+        $this->assertDatabaseHas('posts', collect($postData)->except('tags')->toArray());
     }
 }

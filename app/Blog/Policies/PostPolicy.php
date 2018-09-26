@@ -19,30 +19,6 @@ class PostPolicy
      */
     public function update(User $user, Post $post)
     {
-        return $user->id == $post->user_id;
-    }
-
-    /**
-     * Determine whether the user can delete the post.
-     *
-     * @param  \Blog\Models\User  $user
-     * @param  \App\Post  $post
-     * @return mixed
-     */
-    public function delete(User $user, Post $post)
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the post.
-     *
-     * @param  \Blog\Models\User  $user
-     * @param  \App\Post  $post
-     * @return mixed
-     */
-    public function forceDelete(User $user, Post $post)
-    {
-        //
+        return $user->isAuthorOf($post) || $user->isAdmin();
     }
 }

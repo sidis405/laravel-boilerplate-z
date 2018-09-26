@@ -13,28 +13,24 @@ Blog TDD con boilerplate
     + Un post ha una cover di default xxx
 
 - L'utente potrà creare un post xxx
-
 - L'utente potrà vedere il listato posts nella home xxx
+- L'utente autore potra modificare un proprio post xxx
+- L'utente admin potra modificare qualsiasi post xxx
 
-- L'utente autore potra modificare un proprio post
-- L'utente admin potra modificare qualsiasi post
-- Una volta modificato un posto da un autore, l'admin riceverà una mail
-- Una volta modificato un posto da un admin, l'autore riceverà una mail
+- Una volta modificato un posto da un autore, l'admin riceverà una mail xxx
+- Una volta modificato un posto da un admin, l'autore riceverà una mail xxx
+- Se un admin modifica il proprio post, non viene inviata nessuna mail xxx
 
 
-
-- I post potranno essere visualizzati per categoria
-- I post potranno essere visualizzati per tag
-- I post potranno essere visualizzati per mese
+- I post potranno essere visualizzati per categoria in ordine decrescente xxx
+- I post potranno essere visualizzati per tag in ordine decrescente
+- I post potranno essere visualizzati per mese in ordine decrescente --- 
 
 - Nella sidebar sarà visibile un archivo per mese
 - Nella sidebar sarà visibile un lista categorie con numero post
 - Nella sidebar sarà visibile un tag cloud
 
 - Il blog dovrà esporre un API con JWT per tutte le azioni soprastanti
-
-
-
 
 - Ogni funzionalità dovrà essere coperta da test
 - Per l'API genereremo la documentazione OpenApi/Swagger

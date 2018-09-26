@@ -38,6 +38,8 @@
         <h2 id="Tests\Unit\UserTest">Unit\User</h2>
         <ul>
             <li style="color: #555753;">✓ Has many posts</li>
+            <li style="color: #555753;">✓ User knows if is admin</li>
+            <li style="color: #555753;">✓ User knows if authored</li>
         </ul>
         <h2 id="Tests\Feature\PostCreationTest">Feature\PostCreation</h2>
         <ul>
@@ -47,18 +49,29 @@
             <li style="color: #555753;">✓ A user can create post</li>
             <li style="color: #555753;">✓ Has mandatory fields</li>
         </ul>
+        <h2 id="Tests\Feature\PostEditingMailTest">Feature\PostEditingMail</h2>
+        <ul>
+            <li style="color: #555753;">✓ Admin gets email if post edited by author</li>
+            <li style="color: #555753;">✓ Author gets email i f post edited by admin</li>
+            <li style="color: #555753;">✓ Admin does not get email i f edited own post</li>
+        </ul>
         <h2 id="Tests\Feature\PostEditingTest">Feature\PostEditing</h2>
         <ul>
             <li style="color: #555753;">✓ A guest user cannot see editing form</li>
-            <li style="color: #555753;">✓ A user can see post editing form</li>
-            <li style="color: #555753;">✓ User can update post</li>
+            <li style="color: #555753;">✓ A user can see own post editing form</li>
+            <li style="color: #555753;">✓ User can update own post</li>
             <li style="color: #555753;">✓ A user cannot modify others post</li>
+            <li style="color: #555753;">✓ Admin can modify any post</li>
         </ul>
         <h2 id="Tests\Feature\PostImageUploadTest">Feature\PostImageUpload</h2>
         <ul>
             <li style="color: #555753;">✓ User can upload an image</li>
             <li style="color: #555753;">✓ Creation form has cover element</li>
             <li style="color: #555753;">✓ Covers are shown</li>
+        </ul>
+        <h2 id="Tests\Feature\PostIndexingByCategoryTest">Feature\PostIndexingByCategory</h2>
+        <ul>
+            <li style="color: #555753;">✓ Home shows all post latest first</li>
         </ul>
         <h2 id="Tests\Feature\PostIndexingTest">Feature\PostIndexing</h2>
         <ul>

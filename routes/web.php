@@ -16,3 +16,5 @@ Route::post('posts', '\Blog\Http\Controllers\PostsController@store')->name('post
 
 Route::get('posts/{post}/edit', '\Blog\Http\Controllers\PostsController@edit')->name('posts.edit');
 Route::patch('posts/{post}', '\Blog\Http\Controllers\PostsController@update')->name('posts.update');
+
+Route::get('categories/{category}', '\Blog\Http\Controllers\CategoriesController@show')->name('categories.show');
