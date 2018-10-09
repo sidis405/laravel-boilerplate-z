@@ -6,9 +6,9 @@
     "hint": null,
     "tags": [],
     "namespace": "Blog\\Repositories",
-    "file": ".\/app\/Blog\/Repositories\/PostsRepository.php",
-    "relative_file": null,
-    "hash": "5bcc8c232f494b387cf7606647829f5a44c51366",
+    "file": ".\/\/app\/Blog\/Repositories\/PostsRepository.php",
+    "relative_file": "\/app\/Blog\/Repositories\/PostsRepository.php",
+    "hash": "e31216816db178557c20bbb14786c06116ab8242",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
@@ -24,11 +24,16 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 10,
-            "short_desc": "",
+            "line": 15,
+            "short_desc": "Get all posts latest first",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Collection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -38,11 +43,16 @@
         },
         "show": {
             "name": "show",
-            "line": 15,
-            "short_desc": "",
+            "line": 26,
+            "short_desc": "Get single post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Models\\Post",
+                    false
+                ]
+            ],
+            "hint_desc": "$post",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -51,8 +61,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 15,
-                    "short_desc": null,
+                    "line": 26,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -69,8 +79,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 15,
-                            "endLine": 15
+                            "startLine": 26,
+                            "endLine": 26
                         }
                     },
                     "default": null,
@@ -81,11 +91,16 @@
         },
         "store": {
             "name": "store",
-            "line": 20,
-            "short_desc": "",
+            "line": 37,
+            "short_desc": "Save post to database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Models\\Post",
+                    false
+                ]
+            ],
+            "hint_desc": "$post",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -94,8 +109,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 20,
-                    "short_desc": null,
+                    "line": 37,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -112,8 +127,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 20,
-                            "endLine": 20
+                            "startLine": 37,
+                            "endLine": 37
                         }
                     },
                     "default": null,
@@ -124,20 +139,28 @@
         },
         "update": {
             "name": "update",
-            "line": 25,
-            "short_desc": "",
+            "line": 49,
+            "short_desc": "Update post in database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Models\\Post",
+                    false
+                ]
+            ],
+            "hint_desc": "$post Updated post",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
-            "errors": [],
+            "errors": [
+                "The \"request\" @param tag variable name is wrong (should be \"post\")",
+                "The \"post\" @param tag variable name is wrong (should be \"request\")"
+            ],
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 25,
+                    "line": 49,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -155,8 +178,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 25,
-                            "endLine": 25
+                            "startLine": 49,
+                            "endLine": 49
                         }
                     },
                     "default": null,
@@ -165,7 +188,7 @@
                 },
                 "request": {
                     "name": "request",
-                    "line": 25,
+                    "line": 49,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -183,8 +206,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 25,
-                            "endLine": 25
+                            "startLine": 49,
+                            "endLine": 49
                         }
                     },
                     "default": null,
@@ -195,11 +218,16 @@
         },
         "destroy": {
             "name": "destroy",
-            "line": 30,
-            "short_desc": "",
+            "line": 60,
+            "short_desc": "Delete post from database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Models\\Post",
+                    false
+                ]
+            ],
+            "hint_desc": "$post Updated post",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -208,8 +236,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 30,
-                    "short_desc": null,
+                    "line": 60,
+                    "short_desc": "Post to be deleted",
                     "long_desc": null,
                     "hint": [
                         [
@@ -226,8 +254,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 30,
-                            "endLine": 30
+                            "startLine": 60,
+                            "endLine": 60
                         }
                     },
                     "default": null,

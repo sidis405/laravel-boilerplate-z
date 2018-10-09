@@ -1,20 +1,21 @@
 {
     "name": "Blog\\Http\\Controllers\\PostsController",
-    "line": 10,
+    "line": 11,
     "short_desc": "",
     "long_desc": "",
     "hint": null,
     "tags": [],
     "namespace": "Blog\\Http\\Controllers",
-    "file": ".\/app\/Blog\/Http\/Controllers\/PostsController.php",
-    "relative_file": null,
-    "hash": "20438d555eeef0fb54c948d73189799d21304b08",
+    "file": ".\/\/app\/Blog\/Http\/Controllers\/PostsController.php",
+    "relative_file": "\/app\/Blog\/Http\/Controllers\/PostsController.php",
+    "hash": "7539334bbb164282e5ec5fd7af6fb4b3c8a4d735",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
         "Post": "Blog\\Models\\Post",
+        "Request": "Illuminate\\Http\\Request",
         "PostRequest": "Blog\\Http\\Requests\\PostRequest",
         "Controller": "App\\Http\\Controllers\\Controller",
         "PostsRepository": "Blog\\Repositories\\PostsRepository"
@@ -25,11 +26,16 @@
     "properties": {
         "postsRepo": {
             "name": "postsRepo",
-            "line": 12,
-            "short_desc": "",
+            "line": 19,
+            "short_desc": "Post Repo containing logic",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Repositories\\PostsRepository",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 2,
             "default": null,
@@ -39,11 +45,16 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 14,
-            "short_desc": "",
+            "line": 27,
+            "short_desc": "Class constructor",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -52,8 +63,8 @@
             "parameters": {
                 "postsRepo": {
                     "name": "postsRepo",
-                    "line": 14,
-                    "short_desc": null,
+                    "line": 27,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -70,8 +81,8 @@
                             "PostsRepository"
                         ],
                         "attributes": {
-                            "startLine": 14,
-                            "endLine": 14
+                            "startLine": 27,
+                            "endLine": 27
                         }
                     },
                     "default": null,
@@ -82,25 +93,64 @@
         },
         "index": {
             "name": "index",
-            "line": 23,
-            "short_desc": "",
+            "line": 43,
+            "short_desc": "Show post index ordered by latest",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
             "errors": [],
-            "parameters": []
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 43,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Illuminate",
+                            "Http",
+                            "Request"
+                        ],
+                        "attributes": {
+                            "startLine": 43,
+                            "endLine": 43
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
         },
         "show": {
             "name": "show",
-            "line": 30,
-            "short_desc": "",
+            "line": 56,
+            "short_desc": "Show a single post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -109,8 +159,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 30,
-                    "short_desc": null,
+                    "line": 56,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -127,8 +177,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 30,
-                            "endLine": 30
+                            "startLine": 56,
+                            "endLine": 56
                         }
                     },
                     "default": null,
@@ -139,11 +189,16 @@
         },
         "create": {
             "name": "create",
-            "line": 37,
-            "short_desc": "",
+            "line": 68,
+            "short_desc": "Show post creation form",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -153,11 +208,16 @@
         },
         "store": {
             "name": "store",
-            "line": 42,
-            "short_desc": "",
+            "line": 79,
+            "short_desc": "Store a post in the database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -166,8 +226,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 42,
-                    "short_desc": null,
+                    "line": 79,
+                    "short_desc": "Self validating form request",
                     "long_desc": null,
                     "hint": [
                         [
@@ -185,8 +245,8 @@
                             "PostRequest"
                         ],
                         "attributes": {
-                            "startLine": 42,
-                            "endLine": 42
+                            "startLine": 79,
+                            "endLine": 79
                         }
                     },
                     "default": null,
@@ -197,11 +257,16 @@
         },
         "edit": {
             "name": "edit",
-            "line": 49,
-            "short_desc": "",
+            "line": 91,
+            "short_desc": "Show edit form for post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -210,7 +275,7 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 49,
+                    "line": 91,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -228,8 +293,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 49,
-                            "endLine": 49
+                            "startLine": 91,
+                            "endLine": 91
                         }
                     },
                     "default": null,
@@ -240,11 +305,16 @@
         },
         "update": {
             "name": "update",
-            "line": 54,
-            "short_desc": "",
+            "line": 103,
+            "short_desc": "Update a single post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -253,8 +323,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 54,
-                    "short_desc": null,
+                    "line": 103,
+                    "short_desc": "The post identifier to update",
                     "long_desc": null,
                     "hint": [
                         [
@@ -271,8 +341,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 54,
-                            "endLine": 54
+                            "startLine": 103,
+                            "endLine": 103
                         }
                     },
                     "default": null,
@@ -281,8 +351,8 @@
                 },
                 "request": {
                     "name": "request",
-                    "line": 54,
-                    "short_desc": null,
+                    "line": 103,
+                    "short_desc": "Self validating form request",
                     "long_desc": null,
                     "hint": [
                         [
@@ -300,8 +370,8 @@
                             "PostRequest"
                         ],
                         "attributes": {
-                            "startLine": 54,
-                            "endLine": 54
+                            "startLine": 103,
+                            "endLine": 103
                         }
                     },
                     "default": null,
@@ -312,11 +382,16 @@
         },
         "destroy": {
             "name": "destroy",
-            "line": 61,
-            "short_desc": "",
+            "line": 116,
+            "short_desc": "Delete a post from the database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -325,8 +400,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 61,
-                    "short_desc": null,
+                    "line": 116,
+                    "short_desc": "The post identifier to delete",
                     "long_desc": null,
                     "hint": [
                         [
@@ -343,8 +418,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 61,
-                            "endLine": 61
+                            "startLine": 116,
+                            "endLine": 116
                         }
                     },
                     "default": null,
