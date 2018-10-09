@@ -2,67 +2,66 @@
 
 namespace Blog\Http\Controllers;
 
-use Blog\Models\Tag;
 use Blog\Models\Post;
-use Blog\Models\Category;
 use Blog\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
+use Blog\Repositories\PostsRepository;
 
 class PostsController extends Controller
 {
-    public function __construct()
+    protected $postsRepo;
+
+    public function __construct(PostsRepository $postsRepo)
     {
         $this->middleware('auth')->except('index', 'show');
         $this->middleware('can:update,post')->only('edit', 'update');
+        $this->middleware('can:delete,post')->only('destroy');
+
+        $this->postsRepo = $postsRepo;
     }
 
     public function index()
     {
-        $posts = Post::with('user', 'category', 'tags')->latest()->get();
+        $posts = $this->postsRepo->index();
 
         return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
     {
-        $post->load('category', 'user', 'tags');
+        $post = $this->postsRepo->show($post);
 
         return view('posts.show', compact('post'));
     }
 
     public function create()
     {
-        $categories = Category::get();
-        $tags = Tag::get();
-
-        return view('posts.create', compact('categories', 'tags'))->withPost(new Post);
+        return view('posts.create')->withPost(new Post);
     }
 
     public function store(PostRequest $request)
     {
-        $post = $request->user()->posts()->create($request->validated());
-
-        $post->tags()->sync($request->tags);
+        $post = $this->postsRepo->store($request);
 
         return redirect()->route('posts.show', $post);
     }
 
     public function edit(Post $post)
     {
-        $categories = Category::get();
-        $tags = Tag::get();
-
-        $post->load('tags');
-
-        return view('posts.edit', compact('post', 'categories', 'tags'));
+        return view('posts.edit', compact('post'));
     }
 
     public function update(Post $post, PostRequest $request)
     {
-        $post->update($request->validated());
-
-        $post->tags()->sync($request->tags);
+        $post = $this->postsRepo->update($post, $request);
 
         return redirect()->route('posts.show', $post);
+    }
+
+    public function destroy(Post $post)
+    {
+        $this->postsRepo->destroy($post);
+
+        return redirect()->route('posts.index');
     }
 }

@@ -1,0 +1,25 @@
+{
+    "name": "Blog\\Models\\Category",
+    "line": 7,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Models",
+    "file": ".\/app\/Blog\/Models\/Category.php",
+    "relative_file": null,
+    "hash": "dd080c277dfbf8e6b84315f8c86e7521300c9306",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Model": "Illuminate\\Database\\Eloquent\\Model"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

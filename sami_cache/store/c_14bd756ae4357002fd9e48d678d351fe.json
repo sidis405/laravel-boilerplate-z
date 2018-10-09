@@ -1,0 +1,99 @@
+{
+    "name": "Blog\\Http\\Controllers\\CategoriesController",
+    "line": 9,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Http\\Controllers",
+    "file": ".\/app\/Blog\/Http\/Controllers\/CategoriesController.php",
+    "relative_file": null,
+    "hash": "8fc03fb15c9c98c96459cf39a0314e454a969b55",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Category": "Blog\\Models\\Category",
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "CategoriesRepository": "Blog\\Repositories\\CategoriesRepository"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__invoke": {
+            "name": "__invoke",
+            "line": 11,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "category": {
+                    "name": "category",
+                    "line": 11,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\Category",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "Category"
+                        ],
+                        "attributes": {
+                            "startLine": 11,
+                            "endLine": 11
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                },
+                "categoriesRepo": {
+                    "name": "categoriesRepo",
+                    "line": 11,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Repositories\\CategoriesRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Repositories",
+                            "CategoriesRepository"
+                        ],
+                        "attributes": {
+                            "startLine": 11,
+                            "endLine": 11
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

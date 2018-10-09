@@ -1,0 +1,70 @@
+{
+    "name": "Blog\\Repositories\\TagsRepository",
+    "line": 8,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Repositories",
+    "file": ".\/app\/Blog\/Repositories\/TagsRepository.php",
+    "relative_file": null,
+    "hash": "7e93cf7e35d5e628f45260826384b59a3f0247ae",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Tag": "Blog\\Models\\Tag",
+        "Post": "Blog\\Models\\Post"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getAllPostsForTag": {
+            "name": "getAllPostsForTag",
+            "line": 10,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "tag": {
+                    "name": "tag",
+                    "line": 10,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\Tag",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "Tag"
+                        ],
+                        "attributes": {
+                            "startLine": 10,
+                            "endLine": 10
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -14,10 +14,22 @@ class PostPolicy
      * Determine whether the user can update the post.
      *
      * @param  \Blog\Models\User  $user
-     * @param  \App\Post  $post
+     * @param  \Blog\Models\Post  $post
      * @return mixed
      */
     public function update(User $user, Post $post)
+    {
+        return $user->isAuthorOf($post) || $user->isAdmin();
+    }
+
+    /**
+     * Determine whether the user can delete the post.
+     *
+     * @param  \Blog\Models\User  $user
+     * @param  \Blog\Models\Post  $post
+     * @return mixed
+     */
+    public function delete(User $user, Post $post)
     {
         return $user->isAuthorOf($post) || $user->isAdmin();
     }

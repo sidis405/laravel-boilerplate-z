@@ -9,6 +9,8 @@ class Post extends Model
 {
     protected $guarded = ['id'];
 
+    protected $with = ['user', 'category', 'tags'];
+
     protected $casts = [
         'user_id' => 'int'
     ];
@@ -50,5 +52,17 @@ class Post extends Model
         ) : null;
 
         $this->attributes['cover'] = $cover;
+    }
+
+    public function scopeFilterTag($query, Tag $tag)
+    {
+        return $query->whereHas('tags', function ($query) use ($tag) {
+            $query->where('tag_id', $tag->id);
+        });
+    }
+
+    public function scopeFilterCategory($query, Category $category)
+    {
+        return $query->where('category_id', $category->id);
     }
 }

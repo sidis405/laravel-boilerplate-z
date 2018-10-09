@@ -1,20 +1,6 @@
 <?php
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/', '\Blog\Http\Controllers\PostsController@index')->name('posts.index');
-Route::get('posts/create', '\Blog\Http\Controllers\PostsController@create')->name('posts.create');
-Route::get('posts/{post}', '\Blog\Http\Controllers\PostsController@show')->name('posts.show');
-Route::post('posts', '\Blog\Http\Controllers\PostsController@store')->name('posts.store');
-
-Route::get('posts/{post}/edit', '\Blog\Http\Controllers\PostsController@edit')->name('posts.edit');
-Route::patch('posts/{post}', '\Blog\Http\Controllers\PostsController@update')->name('posts.update');
-
-Route::get('categories/{category}', '\Blog\Http\Controllers\CategoriesController@show')->name('categories.show');
+Route::get('/', 'PostsController@index')->name('posts.index');
+Route::resource('posts', 'PostsController')->except('index');
+Route::get('categories/{category}', 'CategoriesController')->name('categories.show');
+Route::get('tags/{tag}', 'TagsController')->name('tags.show');

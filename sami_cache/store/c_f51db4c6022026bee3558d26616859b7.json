@@ -1,0 +1,72 @@
+{
+    "name": "Blog\\Api\\Http\\Controllers\\ApiController",
+    "line": 20,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "SWG\\Swagger": [
+            [
+                "(\n",
+                "",
+                "basePath=\"\/api\","
+            ]
+        ],
+        "SWG\\Info": [
+            [
+                "(\n",
+                "",
+                "",
+                "",
+                "",
+                "title=\"Blog\",\n",
+                "",
+                "",
+                "",
+                "",
+                "description=\"REST",
+                "API\",\n",
+                "",
+                "",
+                "",
+                "",
+                "version=\"0.1\",\n",
+                "",
+                "",
+                "",
+                "",
+                "termsOfService=\"terms\","
+            ]
+        ],
+        "SWG\\Contact": [
+            [
+                "(name=\"forge405@gmail.com\"),"
+            ]
+        ],
+        "SWG\\License": [
+            [
+                "(name=\"Proprietary",
+                "License\")\n",
+                "",
+                ")\n)"
+            ]
+        ]
+    },
+    "namespace": "Blog\\Api\\Http\\Controllers",
+    "file": ".\/app\/Blog\/Api\/Http\/Controllers\/ApiController.php",
+    "relative_file": null,
+    "hash": "5bc83b7b282e693e07836475f492d8499d082d48",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

@@ -1,0 +1,99 @@
+{
+    "name": "Blog\\Http\\Controllers\\TagsController",
+    "line": 9,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Http\\Controllers",
+    "file": ".\/app\/Blog\/Http\/Controllers\/TagsController.php",
+    "relative_file": null,
+    "hash": "945e2d7ae442e207f7d9f0b13cf10c2d1e3d62f8",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Tag": "Blog\\Models\\Tag",
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "TagsRepository": "Blog\\Repositories\\TagsRepository"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__invoke": {
+            "name": "__invoke",
+            "line": 11,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "tag": {
+                    "name": "tag",
+                    "line": 11,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\Tag",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "Tag"
+                        ],
+                        "attributes": {
+                            "startLine": 11,
+                            "endLine": 11
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                },
+                "tagsRepo": {
+                    "name": "tagsRepo",
+                    "line": 11,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Repositories\\TagsRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Repositories",
+                            "TagsRepository"
+                        ],
+                        "attributes": {
+                            "startLine": 11,
+                            "endLine": 11
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

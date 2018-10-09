@@ -8,7 +8,7 @@ use Blog\Repositories\CategoriesRepository;
 
 class CategoriesController extends Controller
 {
-    public function show(Category $category, CategoriesRepository $categoriesRepo)
+    public function __invoke(Category $category, CategoriesRepository $categoriesRepo)
     {
         $posts = $categoriesRepo->getAllPostForCategory($category);
 

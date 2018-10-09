@@ -9,6 +9,6 @@ class CategoriesRepository
 {
     public function getAllPostForCategory(Category $category)
     {
-        return Post::where('category_id', $category->id)->with('user', 'category', 'tags')->latest()->get();
+        return Post::filterCategory($category)->latest()->get();
     }
 }

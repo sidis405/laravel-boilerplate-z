@@ -1,0 +1,137 @@
+{
+    "name": "Blog\\Api\\Http\\Controllers\\CategoriesController",
+    "line": 9,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Api\\Http\\Controllers",
+    "file": ".\/app\/Blog\/Api\/Http\/Controllers\/CategoriesController.php",
+    "relative_file": null,
+    "hash": "102aabeec79835f8ad3b5def0828eab481242951",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Category": "Blog\\Models\\Category",
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "CategoriesRepository": "Blog\\Repositories\\CategoriesRepository"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__invoke": {
+            "name": "__invoke",
+            "line": 29,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "SWG\\Get": [
+                    [
+                        "(path=\"\/categories\/{category}\",\n",
+                        "tags={\"Categories\"},\n",
+                        "summary=\"Show",
+                        "Category\",\n",
+                        "description=\"Show",
+                        "posts",
+                        "belonging",
+                        "to",
+                        "a",
+                        "given",
+                        "category\",\n",
+                        "operationId=\"showCategory\",\n",
+                        "produces={\"application\/json\"},\n",
+                        "@SWG\\Parameter(\n",
+                        "",
+                        "name=\"category\",\n",
+                        "",
+                        "in=\"path\",\n",
+                        "",
+                        "description=\"Category",
+                        "identifier",
+                        "(example:",
+                        "id)\",\n",
+                        "",
+                        "required=true,\n",
+                        "",
+                        "type=\"string\"\n),\n",
+                        "@SWG\\Response(response=\"200\",",
+                        "description=\"Success\"),\n",
+                        "@SWG\\Response(response=\"500\",",
+                        "description=\"Internal",
+                        "Server",
+                        "Error\")\n)"
+                    ]
+                ]
+            },
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "category": {
+                    "name": "category",
+                    "line": 29,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\Category",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "Category"
+                        ],
+                        "attributes": {
+                            "startLine": 29,
+                            "endLine": 29
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                },
+                "categoriesRepo": {
+                    "name": "categoriesRepo",
+                    "line": 29,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Repositories\\CategoriesRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Repositories",
+                            "CategoriesRepository"
+                        ],
+                        "attributes": {
+                            "startLine": 29,
+                            "endLine": 29
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -1,0 +1,161 @@
+{
+    "name": "Blog\\Jobs\\SendPostUpdateEmailJob",
+    "line": 15,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "Blog\\Jobs",
+    "file": ".\/app\/Blog\/Jobs\/SendPostUpdateEmailJob.php",
+    "relative_file": null,
+    "hash": "0edcbd696bb96814b8756d39c766587d86dd8a74",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Post": "Blog\\Models\\Post",
+        "User": "Blog\\Models\\User",
+        "Queueable": "Illuminate\\Bus\\Queueable",
+        "PostUpdatedEmail": "Blog\\Mail\\PostUpdatedEmail",
+        "Mail": "Illuminate\\Support\\Facades\\Mail",
+        "SerializesModels": "Illuminate\\Queue\\SerializesModels",
+        "InteractsWithQueue": "Illuminate\\Queue\\InteractsWithQueue",
+        "ShouldQueue": "Illuminate\\Contracts\\Queue\\ShouldQueue",
+        "Dispatchable": "Illuminate\\Foundation\\Bus\\Dispatchable"
+    },
+    "errors": [],
+    "interfaces": {
+        "Illuminate\\Contracts\\Queue\\ShouldQueue": "Illuminate\\Contracts\\Queue\\ShouldQueue"
+    },
+    "traits": {
+        "Illuminate\\Foundation\\Bus\\Dispatchable": "Illuminate\\Foundation\\Bus\\Dispatchable",
+        "Illuminate\\Queue\\InteractsWithQueue": "Illuminate\\Queue\\InteractsWithQueue",
+        "Illuminate\\Bus\\Queueable": "Illuminate\\Bus\\Queueable",
+        "Illuminate\\Queue\\SerializesModels": "Illuminate\\Queue\\SerializesModels"
+    },
+    "properties": {
+        "post": {
+            "name": "post",
+            "line": 19,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": null,
+            "errors": []
+        },
+        "user": {
+            "name": "user",
+            "line": 20,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 2,
+            "default": null,
+            "errors": []
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 27,
+            "short_desc": "Create a new job instance.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "post": {
+                    "name": "post",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\Post",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "Post"
+                        ],
+                        "attributes": {
+                            "startLine": 27,
+                            "endLine": 27
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                },
+                "user": {
+                    "name": "user",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Blog\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "Blog",
+                            "Models",
+                            "User"
+                        ],
+                        "attributes": {
+                            "startLine": 27,
+                            "endLine": 27
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "handle": {
+            "name": "handle",
+            "line": 38,
+            "short_desc": "Execute the job.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

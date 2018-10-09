@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Api;
 
 use Tests\TestCase;
 use Blog\Models\Post;
@@ -11,7 +11,7 @@ class PostIndexingTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function homeShowsAllPostLatestFirst()
+    public function showsAllPostLatestFirst()
     {
         $posts = collect([
             factory(Post::class)->create([

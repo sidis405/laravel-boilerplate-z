@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Blog\Models\Tag;
+use Blog\Models\Category;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +16,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer(['posts.create', 'posts.edit'], function ($view) {
+            $categories = Category::get();
+            $tags = Tag::get();
+
+            return $view->with('categories', $categories)->with('tags', $tags);
+        });
     }
 
     /**
