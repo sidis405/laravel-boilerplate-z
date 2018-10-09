@@ -23,7 +23,7 @@ Blog TDD con boilerplate
 
 - Ogni funzionalità dovrà essere coperta da test xxx
 - Per l'API genereremo la documentazione OpenApi/Swagger xxx
-- Per tutta la sorgente auto-genereremo la documentazione
+- Per tutta la sorgente auto-genereremo la documentazione xxx
 - Tutto il processo di build passerà per CI (travis-ci.org)
 
 - Un utente puo rimuovere solo un proprio post

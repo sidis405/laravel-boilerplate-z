@@ -8,7 +8,7 @@
     "namespace": "Blog\\Api\\Http\\Controllers",
     "file": ".\/\/app\/Blog\/Api\/Http\/Controllers\/PostsController.php",
     "relative_file": "\/app\/Blog\/Api\/Http\/Controllers\/PostsController.php",
-    "hash": "fd197a96e817ebed4fdcf51e89ce5f44cc72e6f5",
+    "hash": "603ac197648dfb3a943d2ebc2f4a53f64bba6770",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -25,11 +25,16 @@
     "properties": {
         "postsRepo": {
             "name": "postsRepo",
-            "line": 12,
-            "short_desc": "",
+            "line": 17,
+            "short_desc": "Post Repo containing logic",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Blog\\Repositories\\PostsRepository",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 2,
             "default": null,
@@ -39,11 +44,16 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 14,
-            "short_desc": "",
+            "line": 25,
+            "short_desc": "Class constructor",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
@@ -52,8 +62,8 @@
             "parameters": {
                 "postsRepo": {
                     "name": "postsRepo",
-                    "line": 14,
-                    "short_desc": null,
+                    "line": 25,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -70,8 +80,8 @@
                             "PostsRepository"
                         ],
                         "attributes": {
-                            "startLine": 14,
-                            "endLine": 14
+                            "startLine": 25,
+                            "endLine": 25
                         }
                     },
                     "default": null,
@@ -82,35 +92,17 @@
         },
         "index": {
             "name": "index",
-            "line": 34,
-            "short_desc": "",
+            "line": 50,
+            "short_desc": "Show post index ordered by latest",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
-            "tags": {
-                "SWG\\Get": [
-                    [
-                        "(path=\"\/posts\",\n",
-                        "tags={\"Posts\"},\n",
-                        "summary=\"Posts",
-                        "Index\",\n",
-                        "description=\"Index",
-                        "of",
-                        "posts",
-                        "ordered",
-                        "by",
-                        "latest\",\n",
-                        "operationId=\"indexPost\",\n",
-                        "produces={\"application\/json\"},\n",
-                        "@SWG\\Response(response=\"200\",",
-                        "description=\"Success\"),\n",
-                        "@SWG\\Response(response=\"500\",",
-                        "description=\"Internal",
-                        "Server",
-                        "Error\")\n)"
-                    ]
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\JsonResponse",
+                    false
                 ]
-            },
+            ],
+            "hint_desc": "",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -119,47 +111,17 @@
         },
         "show": {
             "name": "show",
-            "line": 63,
-            "short_desc": "",
+            "line": 85,
+            "short_desc": "Show a single post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
-            "tags": {
-                "SWG\\Get": [
-                    [
-                        "(path=\"\/posts\/{post}\",\n",
-                        "tags={\"Posts\"},\n",
-                        "summary=\"Posts",
-                        "Show\",\n",
-                        "description=\"Show",
-                        "a",
-                        "single",
-                        "post\",\n",
-                        "operationId=\"showPost\",\n",
-                        "produces={\"application\/json\"},\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"post\",\n",
-                        "",
-                        "in=\"path\",\n",
-                        "",
-                        "description=\"Post",
-                        "identifier",
-                        "(example:",
-                        "id)\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Response(response=\"200\",",
-                        "description=\"Success\"),\n",
-                        "@SWG\\Response(response=\"500\",",
-                        "description=\"Internal",
-                        "Server",
-                        "Error\")\n)"
-                    ]
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\JsonResponse",
+                    false
                 ]
-            },
+            ],
+            "hint_desc": "",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -167,8 +129,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 63,
-                    "short_desc": null,
+                    "line": 85,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -185,8 +147,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 63,
-                            "endLine": 63
+                            "startLine": 85,
+                            "endLine": 85
                         }
                     },
                     "default": null,
@@ -197,114 +159,17 @@
         },
         "store": {
             "name": "store",
-            "line": 123,
-            "short_desc": "",
+            "line": 151,
+            "short_desc": "Store a post in the database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
-            "tags": {
-                "SWG\\Post": [
-                    [
-                        "(path=\"\/posts\",\n",
-                        "tags={\"Posts\"},\n",
-                        "summary=\"Posts",
-                        "Store\",\n",
-                        "description=\"Store",
-                        "a",
-                        "post",
-                        "in",
-                        "the",
-                        "database\",\n",
-                        "operationId=\"storePost\",\n",
-                        "produces={\"application\/json\"},\n",
-                        "security={{\"default\":",
-                        "{}}},\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"title\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"The",
-                        "title\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"preview\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Short",
-                        "introduction",
-                        "of",
-                        "the",
-                        "post\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"body\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"text",
-                        "of",
-                        "the",
-                        "article\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"category_id\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Id",
-                        "of",
-                        "category",
-                        "to",
-                        "tag",
-                        "post",
-                        "with\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"integer\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"cover\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Post",
-                        "cover",
-                        "Image\",\n",
-                        "",
-                        "required=false,\n",
-                        "",
-                        "type=\"file\"\n),\n",
-                        "@SWG\\Response(response=\"201\",",
-                        "description=\"Resource",
-                        "created\"),\n",
-                        "@SWG\\Response(response=\"401\",",
-                        "description=\"Unauthorized\"),\n",
-                        "@SWG\\Response(response=\"422\",",
-                        "description=\"Validation",
-                        "failed\"),\n",
-                        "@SWG\\Response(response=\"500\",",
-                        "description=\"Internal",
-                        "Server",
-                        "Error\")\n)"
-                    ]
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\JsonResponse",
+                    false
                 ]
-            },
+            ],
+            "hint_desc": "",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -312,8 +177,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 123,
-                    "short_desc": null,
+                    "line": 151,
+                    "short_desc": "Self validating form request",
                     "long_desc": null,
                     "hint": [
                         [
@@ -331,8 +196,8 @@
                             "PostRequest"
                         ],
                         "attributes": {
-                            "startLine": 123,
-                            "endLine": 123
+                            "startLine": 151,
+                            "endLine": 151
                         }
                     },
                     "default": null,
@@ -343,129 +208,17 @@
         },
         "update": {
             "name": "update",
-            "line": 189,
-            "short_desc": "",
+            "line": 224,
+            "short_desc": "Update a single post",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
-            "tags": {
-                "SWG\\Patch": [
-                    [
-                        "(path=\"\/posts\/{post}\",\n",
-                        "tags={\"Posts\"},\n",
-                        "summary=\"Posts",
-                        "Update\",\n",
-                        "description=\"Update",
-                        "a",
-                        "post",
-                        "in",
-                        "the",
-                        "database\",\n",
-                        "operationId=\"updatePost\",\n",
-                        "produces={\"application\/json\"},\n",
-                        "security={{\"default\":",
-                        "{}}},\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"post\",\n",
-                        "",
-                        "in=\"path\",\n",
-                        "",
-                        "description=\"Id",
-                        "of",
-                        "post",
-                        "to",
-                        "update\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"title\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"The",
-                        "title\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"preview\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Short",
-                        "introduction",
-                        "of",
-                        "the",
-                        "post\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"body\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"text",
-                        "of",
-                        "the",
-                        "article\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"category_id\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Id",
-                        "of",
-                        "category",
-                        "to",
-                        "tag",
-                        "post",
-                        "with\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"integer\"\n),\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"cover\",\n",
-                        "",
-                        "in=\"formData\",\n",
-                        "",
-                        "description=\"Post",
-                        "cover",
-                        "Image\",\n",
-                        "",
-                        "required=false,\n",
-                        "",
-                        "type=\"file\"\n),\n",
-                        "@SWG\\Response(response=\"201\",",
-                        "description=\"Resource",
-                        "created\"),\n",
-                        "@SWG\\Response(response=\"401\",",
-                        "description=\"Unauthorized\"),\n",
-                        "@SWG\\Response(response=\"422\",",
-                        "description=\"Validation",
-                        "failed\"),\n",
-                        "@SWG\\Response(response=\"500\",",
-                        "description=\"Internal",
-                        "Server",
-                        "Error\")\n)"
-                    ]
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\JsonResponse",
+                    false
                 ]
-            },
+            ],
+            "hint_desc": "",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -473,8 +226,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 189,
-                    "short_desc": null,
+                    "line": 224,
+                    "short_desc": "The post identifier to update",
                     "long_desc": null,
                     "hint": [
                         [
@@ -491,8 +244,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 189,
-                            "endLine": 189
+                            "startLine": 224,
+                            "endLine": 224
                         }
                     },
                     "default": null,
@@ -501,8 +254,8 @@
                 },
                 "request": {
                     "name": "request",
-                    "line": 189,
-                    "short_desc": null,
+                    "line": 224,
+                    "short_desc": "Self validating form request",
                     "long_desc": null,
                     "hint": [
                         [
@@ -520,8 +273,8 @@
                             "PostRequest"
                         ],
                         "attributes": {
-                            "startLine": 189,
-                            "endLine": 189
+                            "startLine": 224,
+                            "endLine": 224
                         }
                     },
                     "default": null,
@@ -532,47 +285,17 @@
         },
         "destroy": {
             "name": "destroy",
-            "line": 217,
-            "short_desc": "",
+            "line": 258,
+            "short_desc": "Delete a post from the database",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
-            "tags": {
-                "SWG\\Delete": [
-                    [
-                        "(path=\"\/posts\/{post}\",\n",
-                        "tags={\"Posts\"},\n",
-                        "summary=\"Posts",
-                        "Delete\",\n",
-                        "description=\"Delete",
-                        "a",
-                        "single",
-                        "post\",\n",
-                        "operationId=\"DeletePost\",\n",
-                        "produces={\"application\/json\"},\n",
-                        "@SWG\\Parameter(\n",
-                        "",
-                        "name=\"post\",\n",
-                        "",
-                        "in=\"path\",\n",
-                        "",
-                        "description=\"Post",
-                        "identifier",
-                        "(example:",
-                        "id)\",\n",
-                        "",
-                        "required=true,\n",
-                        "",
-                        "type=\"string\"\n),\n",
-                        "@SWG\\Response(response=\"200\",",
-                        "description=\"Success\"),\n",
-                        "@SWG\\Response(response=\"500\",",
-                        "description=\"Internal",
-                        "Server",
-                        "Error\")\n)"
-                    ]
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\JsonResponse",
+                    false
                 ]
-            },
+            ],
+            "hint_desc": "",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -580,8 +303,8 @@
             "parameters": {
                 "post": {
                     "name": "post",
-                    "line": 217,
-                    "short_desc": null,
+                    "line": 258,
+                    "short_desc": "The post identifier to delete",
                     "long_desc": null,
                     "hint": [
                         [
@@ -598,8 +321,8 @@
                             "Post"
                         ],
                         "attributes": {
-                            "startLine": 217,
-                            "endLine": 217
+                            "startLine": 258,
+                            "endLine": 258
                         }
                     },
                     "default": null,

@@ -9,8 +9,19 @@ use Blog\Repositories\PostsRepository;
 
 class PostsController extends Controller
 {
+    /**
+     * Post Repo containing logic
+     *
+     * @var \Blog\Repositories\PostsRepository
+     */
     protected $postsRepo;
 
+    /**
+     * Class constructor
+     *
+     * @param \Blog\Repositories\PostsRepository $postsRepo
+     * @return void
+     */
     public function __construct(PostsRepository $postsRepo)
     {
         $this->middleware('jwt.auth')->except('index', 'show');
@@ -30,6 +41,11 @@ class PostsController extends Controller
      *  @SWG\Response(response="200", description="Success"),
      *  @SWG\Response(response="500", description="Internal Server Error")
      * )
+     */
+    /**
+     * Show post index ordered by latest
+     *
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
@@ -60,6 +76,12 @@ class PostsController extends Controller
      *  @SWG\Response(response="500", description="Internal Server Error")
      * )
      */
+    /**
+    * Show a single post
+    *
+    * @param \Blog\Models\Post $post
+    * @return \Illuminate\Http\JsonResponse
+    */
     public function show(Post $post)
     {
         return response()->json([
@@ -119,6 +141,12 @@ class PostsController extends Controller
      *  @SWG\Response(response="422", description="Validation failed"),
      *  @SWG\Response(response="500", description="Internal Server Error")
      * )
+     */
+    /**
+     * Store a post in the database
+     *
+     * @param \Blog\Http\Requests\PostRequest $request Self validating form request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(PostRequest $request)
     {
@@ -186,6 +214,13 @@ class PostsController extends Controller
      *  @SWG\Response(response="500", description="Internal Server Error")
      * )
      */
+    /**
+     * Update a single post
+     *
+     * @param \Blog\Models\Post $post The post identifier to update
+     * @param \Blog\Http\Requests\PostRequest $request Self validating form request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function update(Post $post, PostRequest $request)
     {
         return response()->json([
@@ -213,6 +248,12 @@ class PostsController extends Controller
      *  @SWG\Response(response="200", description="Success"),
      *  @SWG\Response(response="500", description="Internal Server Error")
      * )
+     */
+    /**
+     * Delete a post from the database
+     *
+     * @param \Blog\Models\Post $post The post identifier to delete
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy(Post $post)
     {
